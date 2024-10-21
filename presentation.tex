@@ -1,5 +1,5 @@
 %------------------------------------------
-% The CGEM LuaTeX Beamer template
+% The CGEM LaTeX Beamer template
 %
 %------------------------------------------
 % About:
@@ -20,12 +20,11 @@
 %------------------------------------------
 \documentclass[dark]{cgem-presentation}
 
-% Link to figures directory
-\graphicspath{{./Figure}{./Logo}}
+\graphicspath{{./Logo}}
+
+% \addbibresource{<path>}
 
 %------------------------------------------
-% These macros contain situation specific
-% information for the presentation
 \newcommand{\PresentationTitle}{Do Not Read Title to Audience}
 \newcommand{\PresentationFirstAuthor}{R. Nate Crummett}
 \newcommand{\PresentationFirstAuthorEmail}{\href{robert\_crummett@mines.edu}{robert\_crummett@mines.edu}}
@@ -46,15 +45,12 @@
 
   % Title slide
   \begin{frame}[plain]
-    % Title frame text
     \begin{center}
-      % Title 
       \vspace{1cm}
       \Huge
       \PresentationTitle{}
       \par
       \vspace{1cm}
-      % Authors
       { \color{SecondColor}
         \huge
         \PresentationFirstAuthor{}*
@@ -64,7 +60,6 @@
         \par
       }
       \vspace{1.2cm}
-      % Affiliations
       { \itshape
         { \color{SecondColor}
           \Large
@@ -108,9 +103,7 @@
 
   % Question slide
   \begin{frame}[plain]
-    % Question slide text
     \begin{center}
-      % Question slide affilitations
       { \color{SecondColor}
         \vspace{1mm}
         \small
@@ -125,7 +118,6 @@
       \HorizontalBar{FirstColor}
       \par
       \vspace{1.5cm}
-      % Thank the audience and make certain they know the talk is finished
       \LARGE
       Thank You
 
@@ -135,7 +127,6 @@
       \HorizontalBar{FirstColor}
       \par
       \vspace{-8mm}
-      % Author contact information
       { \color{SecondColor}
         \normalsize
         \PresentationFirstAuthor{}*: %
@@ -163,7 +154,7 @@
 
   \end{frame}
 
-  % All citations listed here
+  % Citations
   \begin{frame}[allowframebreaks,plain]{References}
     \printbibliography
   \end{frame}
