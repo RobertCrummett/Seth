@@ -1,0 +1,171 @@
+%------------------------------------------
+% The CGEM LuaTeX Beamer template
+%
+%------------------------------------------
+% About:
+% The template can be used to make simple
+% power point presentations (pdf format).
+% This class is a simple wrapper around a
+% Beamer template.
+%
+%------------------------------------------
+% Option:
+% dark/light   color theme of presentation
+%              this does not change figure 
+%              colors
+% 
+%------------------------------------------
+% Author:
+% R. Nate Crummett
+%------------------------------------------
+\documentclass[dark]{cgem-presentation}
+
+% Link to figures directory
+\graphicspath{{./Figure}{./Logo}}
+
+%------------------------------------------
+% These macros contain situation specific
+% information for the presentation
+\newcommand{\PresentationTitle}{Do Not Read Title to Audience}
+\newcommand{\PresentationFirstAuthor}{R. Nate Crummett}
+\newcommand{\PresentationFirstAuthorEmail}{\href{robert\_crummett@mines.edu}{robert\_crummett@mines.edu}}
+\newcommand{\PresentationSecondAuthor}{Yaoguo Li}
+\newcommand{\PresentationAffiliationCGEM}{Center for Gravity, Electrical \& Magnetic Studies}
+\newcommand{\PresentationAffiliationGeophysics}{Department of Geophysics}
+\newcommand{\PresentationAffiliationMines}{Colorado School of Mines}
+\newcommand{\PresentationConferenceName}{Conference Name}
+\newcommand{\PresentationMeetingName}{Meeting Name}
+\newcommand{\PresentationLocation}{Location}
+\newcommand{\PresentationInformation}{Session Information (if available)}
+\newcommand{\PresentationDate}{Date}
+\newcommand{\PresentationTime}{Time}
+
+%------------------------------------------
+%% Presentation
+\begin{document}
+
+  % Title slide
+  \begin{frame}[plain]
+    % Title frame text
+    \begin{center}
+      % Title 
+      \vspace{1cm}
+      \Huge
+      \PresentationTitle{}
+      \par
+      \vspace{1cm}
+      % Authors
+      { \color{SecondColor}
+        \huge
+        \PresentationFirstAuthor{}*
+        \par
+        \vspace{2mm}
+        \PresentationSecondAuthor{}
+        \par
+      }
+      \vspace{1.2cm}
+      % Affiliations
+      { \itshape
+        { \color{SecondColor}
+          \Large
+          \PresentationAffiliationCGEM{} (CGEM)
+          \par
+          \large
+          \PresentationAffiliationGeophysics{} --- %
+            \PresentationAffiliationMines{}
+          \par
+        }
+        \vspace{2mm}
+        \normalsize
+        \PresentationConferenceName{} --- %
+          \PresentationMeetingName{} --- %
+          \PresentationLocation{}
+        \par
+        \PresentationInformation{}
+        \par
+        \PresentationDate{} --- %
+          \PresentationTime{}
+        \par
+      }
+    \end{center}
+
+    % Title page Mines logo
+    \begin{figure}
+      \begin{textblock*}{2.7cm}(0.06\paperwidth,0.34\paperheight)
+        \includegraphics[width=2.7cm]{\LogoFileMines}
+      \end{textblock*}
+    \end{figure}
+
+    % Title page CGEM logo
+    \begin{figure}
+      \vspace*{-11.09294pt}
+      \begin{textblock*}{2.85cm}(0.77\paperwidth,0.36\paperheight)
+        \includegraphics[width=2.4cm,keepaspectratio]{\LogoFileCGEM}
+      \end{textblock*}
+    \end{figure}
+
+  \end{frame}
+
+  % Question slide
+  \begin{frame}[plain]
+    % Question slide text
+    \begin{center}
+      % Question slide affilitations
+      { \color{SecondColor}
+        \vspace{1mm}
+        \small
+        \PresentationAffiliationMines{}
+        \par
+        \vspace{1mm}
+        \Large
+        \PresentationAffiliationCGEM{}
+        \par
+      }
+      \vspace{-1mm}
+      \HorizontalBar{FirstColor}
+      \par
+      \vspace{1.5cm}
+      % Thank the audience and make certain they know the talk is finished
+      \LARGE
+      Thank You
+
+      Questions?
+      \par
+      \vspace{1.95cm}
+      \HorizontalBar{FirstColor}
+      \par
+      \vspace{-8mm}
+      % Author contact information
+      { \color{SecondColor}
+        \normalsize
+        \PresentationFirstAuthor{}*: %
+          \PresentationFirstAuthorEmail{}
+        \par
+        \PresentationSecondAuthor{}
+        \par
+      }
+    \end{center}
+
+    % Mines logo
+    \begin{figure}
+      \begin{textblock*}{1.5cm}(0.04\paperwidth,0.01\paperheight)
+        \includegraphics[width=1.5cm]{\LogoFileMines}
+      \end{textblock*}
+    \end{figure}
+
+    % CGEM logo
+    \begin{figure}
+      \vspace*{-19.00015pt}
+      \begin{textblock*}{1.35cm}(0.867\paperwidth,0.02\paperheight)
+        \includegraphics[width=1.35cm]{\LogoFileCGEM}
+      \end{textblock*}
+    \end{figure}
+
+  \end{frame}
+
+  % All citations listed here
+  \begin{frame}[allowframebreaks,plain]{References}
+    \printbibliography
+  \end{frame}
+  
+\end{document}
