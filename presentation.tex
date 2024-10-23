@@ -25,138 +25,119 @@
 % \addbibresource{<path>}
 
 %------------------------------------------
-\newcommand{\PresentationTitle}{Do Not Read Title to Audience}
-\newcommand{\PresentationFirstAuthor}{R. Nate Crummett}
-\newcommand{\PresentationFirstAuthorEmail}{\href{robert\_crummett@mines.edu}{robert\_crummett@mines.edu}}
-\newcommand{\PresentationSecondAuthor}{Yaoguo Li}
-\newcommand{\PresentationAffiliationCGEM}{Center for Gravity, Electrical \& Magnetic Studies}
-\newcommand{\PresentationAffiliationGeophysics}{Department of Geophysics}
-\newcommand{\PresentationAffiliationMines}{Colorado School of Mines}
-\newcommand{\PresentationConferenceName}{Conference Name}
-\newcommand{\PresentationMeetingName}{Meeting Name}
-\newcommand{\PresentationLocation}{Location}
-\newcommand{\PresentationInformation}{Session Information (if available)}
-\newcommand{\PresentationDate}{Date}
-\newcommand{\PresentationTime}{Time}
-
-%------------------------------------------
 %% Presentation
 \begin{document}
 
-  % Title slide
-  \begin{frame}[plain]
-    \begin{center}
-      \vspace{1cm}
-      \Huge
-      \PresentationTitle{}
-      \par
-      \vspace{1cm}
-      { \color{SecondColor}
-        \huge
-        \PresentationFirstAuthor{}*
-        \par
-        \vspace{2mm}
-        \PresentationSecondAuthor{}
-        \par
-      }
-      \vspace{1.2cm}
-      { \itshape
-        { \color{SecondColor}
-          \Large
-          \PresentationAffiliationCGEM{} (CGEM)
-          \par
-          \large
-          \PresentationAffiliationGeophysics{} --- %
-            \PresentationAffiliationMines{}
-          \par
-        }
-        \vspace{2mm}
-        \normalsize
-        \PresentationConferenceName{} --- %
-          \PresentationMeetingName{} --- %
-          \PresentationLocation{}
-        \par
-        \PresentationInformation{}
-        \par
-        \PresentationDate{} --- %
-          \PresentationTime{}
-        \par
-      }
-    \end{center}
+% Title slide
+\begin{frame}[plain]
+	\begin{center}
+		\vspace{1cm}
+		\Huge
+		Do Not Read Title to Audience
 
-    % Title page Mines logo
-    \begin{figure}
-      \begin{textblock*}{2.7cm}(0.06\paperwidth,0.34\paperheight)
-        \includegraphics[width=2.7cm]{\LogoFileMines}
-      \end{textblock*}
-    \end{figure}
+		\vspace{1cm}
+		{ \color{SecondColor}
+		\huge
+		R. Nate Crummett*
 
-    % Title page CGEM logo
-    \begin{figure}
-      \vspace*{-11.09294pt}
-      \begin{textblock*}{2.85cm}(0.77\paperwidth,0.36\paperheight)
-        \includegraphics[width=2.4cm,keepaspectratio]{\LogoFileCGEM}
-      \end{textblock*}
-    \end{figure}
+		\vspace{2mm}
+		Yaoguo Li
+		}
 
-  \end{frame}
+		\vspace{1.2cm}
+		{ \itshape
+		{ \color{SecondColor}
+		\Large
+		Center for Gravity, Electrical \& Magnetic Studies (CGEM)
 
-  % Question slide
-  \begin{frame}[plain]
-    \begin{center}
-      { \color{SecondColor}
-        \vspace{1mm}
-        \small
-        \PresentationAffiliationMines{}
-        \par
-        \vspace{1mm}
-        \Large
-        \PresentationAffiliationCGEM{}
-        \par
-      }
-      \vspace{-1mm}
-      \HorizontalBar{FirstColor}
-      \par
-      \vspace{1.5cm}
-      \LARGE
-      Thank You
+		\large
+		\vspace{-5mm}
+		Department of Geophysics --- Colorado School of Mines
+		}
 
-      Questions?
-      \par
-      \vspace{1.95cm}
-      \HorizontalBar{FirstColor}
-      \par
-      \vspace{-8mm}
-      { \color{SecondColor}
-        \normalsize
-        \PresentationFirstAuthor{}*: %
-          \PresentationFirstAuthorEmail{}
-        \par
-        \PresentationSecondAuthor{}
-        \par
-      }
-    \end{center}
+		\vspace{1mm}
+		\normalsize
+		Conference Name --- Meeting Name --- Location
 
-    % Mines logo
-    \begin{figure}
-      \begin{textblock*}{1.5cm}(0.04\paperwidth,0.01\paperheight)
-        \includegraphics[width=1.5cm]{\LogoFileMines}
-      \end{textblock*}
-    \end{figure}
+		Session Information (if available)
 
-    % CGEM logo
-    \begin{figure}
-      \vspace*{-19.00015pt}
-      \begin{textblock*}{1.35cm}(0.867\paperwidth,0.02\paperheight)
-        \includegraphics[width=1.35cm]{\LogoFileCGEM}
-      \end{textblock*}
-    \end{figure}
+		\vspace{-6mm}
+		Date --- Time
+		}
+	\end{center}
 
-  \end{frame}
+	% Title page Mines logo
+	\begin{figure}
+		\begin{textblock*}{2.7cm}(0.06\paperwidth,0.34\paperheight)
+			\includegraphics[width=2.7cm]{\LogoFileMines}
+		\end{textblock*}
+	\end{figure}
 
-  % Citations
-  \begin{frame}[allowframebreaks,plain]{References}
-    \printbibliography
-  \end{frame}
-  
+	% Title page CGEM logo
+	\begin{figure}
+		\vspace*{-11.09294pt}
+		\begin{textblock*}{2.85cm}(0.77\paperwidth,0.36\paperheight)
+			\includegraphics[width=2.4cm,keepaspectratio]{\LogoFileCGEM}
+		\end{textblock*}
+	\end{figure}
+
+\end{frame}
+
+% Question slide
+\begin{frame}[plain]
+	\begin{center}
+		{ \color{SecondColor}
+		\vspace{1mm}
+		\small
+		Colorado School of Mines
+
+		\vspace{2mm}
+		\Large
+		Center for Gravity, Electrical \& Magnetic Studies
+		}
+
+		\vspace{-1mm}
+		\HorizontalBar{FirstColor}
+
+		\vspace{1.5cm}
+		\LARGE
+		Thank You
+
+		Questions?
+
+		\vspace{1.95cm}
+		\HorizontalBar{FirstColor}
+
+		\vspace{-8mm}
+		{ \color{SecondColor}
+		\normalsize
+		R Nate Crummett*: \href{robert\_crummett@mines.edu}{robert\_crummett@mines.edu}
+
+		\vspace{-3mm}
+		Yaoguo Li
+		}
+	\end{center}
+
+	% Mines logo
+	\begin{figure}
+		\begin{textblock*}{1.5cm}(0.04\paperwidth,0.01\paperheight)
+			\includegraphics[width=1.5cm]{\LogoFileMines}
+		\end{textblock*}
+	\end{figure}
+
+	% CGEM logo
+	\begin{figure}
+		\vspace*{-19.00015pt}
+		\begin{textblock*}{1.35cm}(0.867\paperwidth,0.02\paperheight)
+			\includegraphics[width=1.35cm]{\LogoFileCGEM}
+		\end{textblock*}
+	\end{figure}
+
+\end{frame}
+
+% Citations
+\begin{frame}[allowframebreaks,plain]{References}
+	\printbibliography
+\end{frame}
+
 \end{document}
