@@ -2,19 +2,6 @@
 % The CGEM LaTeX Beamer template
 %
 %------------------------------------------
-% About:
-% The template can be used to make simple
-% power point presentations (pdf format).
-% This class is a simple wrapper around a
-% Beamer template.
-%
-%------------------------------------------
-% Option:
-% dark/light   color theme of presentation
-%              this does not change figure 
-%              colors
-% 
-%------------------------------------------
 % Author:
 % R. Nate Crummett
 %------------------------------------------
@@ -31,37 +18,31 @@
 % Title slide
 \begin{frame}[plain]
 	\begin{center}
-		\vspace{1cm}
+		\vskip 1cm
 		\Huge
-		Do Not Read Title to Audience
-
-		\vspace{1cm}
+		Do Not Read T\kern -2pt \i tle to Audience
+		\vskip 1cm
 		{ \color{SecondColor}
 		\huge
-		R. Nate Crummett*
-
-		\vspace{2mm}
+		R Nate Crummett
+		\vskip 2mm
 		Yaoguo Li
 		}
-
-		\vspace{1.2cm}
+		\vskip 1.2cm
 		{ \itshape
 		{ \color{SecondColor}
 		\Large
-		Center for Gravity, Electrical \& Magnetic Studies (CGEM)
-
+		Center for Gravity, Electrical \& Magnetic Studies
 		\large
-		\vspace{-5mm}
+		\vskip -5mm
 		Department of Geophysics --- Colorado School of Mines
 		}
-
-		\vspace{1mm}
+		\vskip 1mm
 		\normalsize
 		Conference Name --- Meeting Name --- Location
 
 		Session Information (if available)
-
-		\vspace{-6mm}
+		\vskip -6mm
 		Date --- Time
 		}
 	\end{center}
@@ -75,60 +56,46 @@
 
 	% Title page CGEM logo
 	\begin{figure}
-		\vspace*{-11.09294pt}
 		\begin{textblock*}{2.85cm}(0.77\paperwidth,0.36\paperheight)
 			\includegraphics[width=2.4cm,keepaspectratio]{\LogoFileCGEM}
 		\end{textblock*}
 	\end{figure}
-
 \end{frame}
 
 % Question slide
 \begin{frame}[plain]
 	\begin{center}
 		{ \color{SecondColor}
-		\vspace{1mm}
-		\small
+		\vskip 1mm
 		Colorado School of Mines
-
-		\vspace{2mm}
+		\vskip 2mm
 		\Large
 		Center for Gravity, Electrical \& Magnetic Studies
 		}
-
-		\vspace{-1mm}
-		\HorizontalBar{FirstColor}
-
-		\vspace{1.5cm}
+		\vskip 2mm
+		\hrule height 1pt
+		\vskip 2.6cm
 		\LARGE
 		Thank You
 
 		Questions?
-
-		\vspace{1.95cm}
-		\HorizontalBar{FirstColor}
-
-		\vspace{-8mm}
-		{ \color{SecondColor}
-		\normalsize
-		R Nate Crummett*: \href{robert\_crummett@mines.edu}{robert\_crummett@mines.edu}
-
-		\vspace{-3mm}
-		Yaoguo Li
-		}
+		\vskip 2.6cm
+		\hrule height 1pt
+		\color{SecondColor}
+		\vskip 2.5mm 
+		\large R Nate Crummett --- Yaoguo Li
 	\end{center}
 
 	% Mines logo
 	\begin{figure}
-		\begin{textblock*}{1.5cm}(0.04\paperwidth,0.01\paperheight)
+		\begin{textblock*}{1.5cm}(0.02\paperwidth,0.01\paperheight)
 			\includegraphics[width=1.5cm]{\LogoFileMines}
 		\end{textblock*}
 	\end{figure}
 
 	% CGEM logo
 	\begin{figure}
-		\vspace*{-19.00015pt}
-		\begin{textblock*}{1.35cm}(0.867\paperwidth,0.02\paperheight)
+		\begin{textblock*}{1.35cm}(0.89\paperwidth,0.02\paperheight)
 			\includegraphics[width=1.35cm]{\LogoFileCGEM}
 		\end{textblock*}
 	\end{figure}

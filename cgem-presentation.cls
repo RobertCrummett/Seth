@@ -1,20 +1,19 @@
 %% CGEM Presentation Package
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cgem-presentation}[2024/10/21 CGEM Presentations]
+\ProvidesClass{cgem-presentation}[2024/12/09 CGEM Presentation]
 
 %----------------------------------------
 %% CGEM Presentation Package Dependencies
 \LoadClass[aspectratio=169]{beamer}
 
 % Preamble
-\RequirePackage{amsmath}
-\RequirePackage{amsfonts}
-\RequirePackage{amssymb}
+\RequirePackage{amsmath, amsfonts, amssymb}
 \RequirePackage[backend=biber, style=authoryear-comp]{biblatex}
+\RequirePackage{color}
 \RequirePackage{fontspec}
 \RequirePackage{hyperref}
+\RequirePackage{libertinus}
 \RequirePackage[absolute,overlay]{textpos}
-\RequirePackage{xcolor}
 
 %-----------------------------------------
 %% Global TeX Settings and Options Processing
@@ -45,7 +44,8 @@
 \ProcessOptions\relax
 
 % Font Settings
-\setsansfont{Arial}
+\setsansfont{Montserrat}
+\setmathrm{Libertinus Serif}
 \usefonttheme{professionalfonts}
 
 % Hyperlink settings
@@ -54,11 +54,12 @@
 	citecolor=ThirdColor,
 	linkcolor=SecondColor,
 	urlcolor=ThirdColor,
-} % Link to corresponding author
+}
 
 % Background and default text color
 \setbeamercolor{background canvas}{bg = ZeroColor}
-\setbeamercolor{normal text}{fg = FirstColor}\usebeamercolor*{normal text}
+\setbeamercolor{normal text}{fg = FirstColor}
+\usebeamercolor*{normal text}
 
 % Turn off Beamer navigation buttons
 \beamertemplatenavigationsymbolsempty
@@ -66,7 +67,9 @@
 % Page numbering
 \setbeamertemplate{footline}{
 	\begin{flushright}
-		\textcolor{SecondColor}{\large \insertframenumber}
+		\color{SecondColor}
+		\large
+		\insertframenumber
 		\hspace{1mm}
 		\vspace{-1mm}
 	\end{flushright}
@@ -87,12 +90,6 @@
 \setbeamerfont*{itemize/enumerate subbody}{size=\Large}
 \setbeamercolor{itemize/enumerate subbody}{fg=FirstColor}
 
-% Second Level -- only use in emergencies!!
-\setbeamertemplate{itemize subsubitem}{\large \color{FirstColor} \textbullet}
-\setbeamertemplate{enumerate subsubitem}{\large \color{FirstColor} \textbullet}
-\setbeamerfont*{itemize/enumerate subsubbody}{size=\large}
-\setbeamercolor{itemize/enumerate subsubbody}{fg=FirstColor}
-
 %------------------------------------------
 %% Frame title format
 
@@ -100,12 +97,6 @@
 \setbeamertemplate{frametitle}[default][center]
 \setbeamerfont*{frametitle}{size=\Huge}
 \setbeamercolor{frametitle}{fg=FirstColor}
-
-%------------------------------------------
-%% Question Slide
-
-% Print a horizontal while bar across the text width of frame
-\newcommand{\HorizontalBar}[1]{ \textcolor{#1}{\noindent \makebox[\linewidth]{\rule{\textwidth}{0.7pt}}} }
 
 %-------------------------------------------
 %% Bibliography Style
@@ -127,30 +118,4 @@
 \renewcommand*{\citesetup}{
 	\color{ThirdColor}
 	\biburlsetup
-}
-
-%------------------------------------------
-% Math blocks
-\AtBeginEnvironment{theorem}{
-	\setbeamerfont{block title}{size=\LARGE, series=\bfseries}
-	\setbeamerfont{block body}{size=\Large, series=\normalfont}
-	\setbeamercolor{block title}{fg=SecondColor}
-	\setbeamercolor{block body}{fg=FirstColor}
-}
-\setbeamertemplate{theorems}[numbered]
-
-\AtBeginEnvironment{proof}{
-	\setbeamerfont{block title}{size=\LARGE, series=\bfseries}
-	\setbeamerfont{block body}{size=\Large, series=\normalfont}
-	\setbeamercolor{block title}{fg=SecondColor}
-	\setbeamercolor{block body}{fg=FirstColor}
-}
-\setbeamertemplate{proofs}[numbered]
-\setbeamertemplate{qed symbol}{\color{FirstColor} \blacksquare}
-
-\AtBeginEnvironment{definition}{
-	\setbeamerfont{block title}{size=\LARGE, series=\bfseries}
-	\setbeamerfont{block body}{size=\Large, series=\normalfont}
-	\setbeamercolor{block title}{fg=SecondColor}
-	\setbeamercolor{block body}{fg=FirstColor}
 }
